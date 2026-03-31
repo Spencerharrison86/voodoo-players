@@ -106,6 +106,21 @@
   }
   .hero-tagline span { color: var(--purple-light); margin: 0 12px; }
 
+  .standings-btn {
+    display: inline-block; margin-top: 24px;
+    background: transparent; color: var(--cream);
+    font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 4px;
+    text-transform: uppercase; padding: 13px 36px; border-radius: 4px;
+    text-decoration: none; border: 1px solid var(--purple);
+    transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
+    position: relative; z-index: 1;
+  }
+  .standings-btn:hover {
+    border-color: var(--purple-light);
+    color: var(--purple-light);
+    box-shadow: 0 0 18px rgba(123,79,191,0.55), 0 0 6px rgba(123,79,191,0.3);
+  }
+
   /* ── HOOK ── */
   .hook {
     background: var(--purple-dark);
@@ -361,120 +376,45 @@
     padding: 16px 0 4px; position: relative; z-index: 1;
   }
 
-  /* ══════════════════════════════
-     MOBILE RESPONSIVE
-  ══════════════════════════════ */
   @media (max-width: 600px) {
-
-    /* Hero */
-    .hero {
-      padding: 36px 20px 32px;
-    }
-    .logo-wrap {
-      width: 110px; height: 110px;
-      margin-bottom: 20px;
-    }
-    .hero-title {
-      font-size: 34px;
-    }
-    .hero-sub {
-      font-size: 15px; letter-spacing: 2px;
-    }
-    .hero-eyebrow {
-      font-size: 10px; letter-spacing: 3px;
-    }
-    .hero-tagline {
-      font-size: 10px; letter-spacing: 2px;
-    }
+    .hero { padding: 36px 20px 32px; }
+    .logo-wrap { width: 110px; height: 110px; margin-bottom: 20px; }
+    .hero-title { font-size: 34px; }
+    .hero-sub { font-size: 15px; letter-spacing: 2px; }
+    .hero-eyebrow { font-size: 10px; letter-spacing: 3px; }
+    .hero-tagline { font-size: 10px; letter-spacing: 2px; }
     .hero-tagline span { margin: 0 6px; }
-
-    /* Hook */
-    .hook {
-      padding: 20px 20px;
-    }
+    .hook { padding: 20px 20px; }
     .hook p { font-size: 17px; }
-
-    /* Sections */
-    .section {
-      padding: 36px 20px 0;
-    }
-    .section-title {
-      font-size: 22px;
-    }
-    .body-text {
-      font-size: 16px;
-    }
-
-    /* Divider */
-    .divider {
-      margin: 36px 20px 0;
-    }
-
-    /* Steps — stack to single column */
-    .steps {
-      grid-template-columns: 1fr !important;
-    }
-
-    /* Schedule */
-    .schedule-header {
-      font-size: 10px; letter-spacing: 2px; padding: 12px 16px;
-    }
-    .schedule-row {
-      gap: 14px; padding: 14px 16px;
-    }
-    .sched-time {
-      font-size: 15px; min-width: 48px;
-    }
+    .section { padding: 36px 20px 0; }
+    .section-title { font-size: 22px; }
+    .body-text { font-size: 16px; }
+    .divider { margin: 36px 20px 0; }
+    .steps { grid-template-columns: 1fr !important; }
+    .schedule-header { font-size: 10px; letter-spacing: 2px; padding: 12px 16px; }
+    .schedule-row { gap: 14px; padding: 14px 16px; }
+    .sched-time { font-size: 15px; min-width: 48px; }
     .sched-dot { display: none; }
     .sched-text h5 { font-size: 12px; letter-spacing: 1px; }
     .sched-text p { font-size: 14px; }
-
-    /* Season split — stack */
-    .season-split {
-      grid-template-columns: 1fr;
-    }
-
-    /* Points — 2×2 grid */
-    .points-row {
-      grid-template-columns: 1fr 1fr;
-    }
+    .season-split { grid-template-columns: 1fr; }
+    .points-row { grid-template-columns: 1fr 1fr; }
     .pt-card .pts { font-size: 26px; }
     .pt-card .label { font-size: 10px; }
-
-    /* Callout */
-    .callout {
-      padding: 16px 18px;
-    }
+    .callout { padding: 16px 18px; }
     .callout p { font-size: 15px; }
-
-    /* CTA */
-    .cta {
-      padding: 40px 20px 36px;
-      margin-top: 40px;
-    }
+    .cta { padding: 40px 20px 36px; margin-top: 40px; }
     .cta h2 { font-size: 26px; }
     .cta p { font-size: 16px; }
-    .cta-details {
-      gap: 20px;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 28px;
-    }
-    .cta-btn {
-      padding: 14px 32px;
-      font-size: 12px; letter-spacing: 3px;
-    }
-    .footer-badge {
-      font-size: 10px; letter-spacing: 2px;
-      padding: 8px 18px;
-    }
+    .cta-details { gap: 20px; flex-direction: column; align-items: center; margin-bottom: 28px; }
+    .cta-btn { padding: 14px 32px; font-size: 12px; letter-spacing: 3px; }
+    .footer-badge { font-size: 10px; letter-spacing: 2px; padding: 8px 18px; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- HERO -->
   <div class="hero">
     <div class="logo-wrap">
       <img src="https://i.imgur.com/xIHZB7o.png" alt="Voodoo Players Club" id="logo-img">
@@ -485,14 +425,13 @@
     <div class="hero-tagline">
       Team Play <span>✦</span> Good People <span>✦</span> No Drama
     </div>
+    <a href="https://voodooplayersclub.lovable.app" target="_blank" class="standings-btn">Go To League Standings</a>
   </div>
 
-  <!-- HOOK -->
   <div class="hook">
     <p>Show up Thursday, grab a partner, and play. <strong>No experience needed — just bring a good time.</strong></p>
   </div>
 
-  <!-- SHOW UP -->
   <div class="section">
     <p class="body-text">
       There's a spot for everyone on Thursday nights. Whether you want a casual game or you're chasing a championship, just walk through the door and we'll get you sorted.
@@ -509,7 +448,6 @@
         <p>Register your team and compete in a <strong style="color: var(--cream);">double elimination tournament</strong> 🎯 — earn points win or lose, track your standing all month, and chase the Monthly Championship. 🥇</p>
       </div>
     </div>
-
     <div class="callout" style="margin-top: 28px;">
       <p>No partner? <strong>No problem.</strong> Come solo and we'll pair you up. The only thing you need to bring is yourself.</p>
     </div>
@@ -517,7 +455,6 @@
 
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond">◆</div><div class="divider-line"></div></div>
 
-  <!-- NIGHT SCHEDULE -->
   <div class="section">
     <div class="section-label">Every Thursday</div>
     <div class="section-title">How the <span class="accent">Night Runs</span></div>
@@ -552,14 +489,12 @@
 
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond">◆</div><div class="divider-line"></div></div>
 
-  <!-- SEASON SYSTEM -->
   <div class="section">
     <div class="section-label">Keep Coming Back</div>
     <div class="section-title">One Night Is Fun. <span class="accent">A Season Is a Story.</span></div>
     <p class="body-text">
       Every Thursday night counts toward the monthly standings. The more you show up, the more you earn — and at the end of each month, the league crowns its champions.
     </p>
-
     <div class="season-split">
       <div class="season-card">
         <span class="card-icon">📅</span>
@@ -572,7 +507,6 @@
         <p>Monthly titles for Top Team, Top Player, Most Consistent, and community-voted <strong>Best Vibes.</strong> Recognition that goes beyond the win/loss record.</p>
       </div>
     </div>
-
     <div class="points-row">
       <div class="pt-card">
         <div class="pts">+1</div>
@@ -591,18 +525,15 @@
         <div class="label">Night Winner</div>
       </div>
     </div>
-
     <div class="callout">
       <p>Points are tracked per player, not just per team — so even if your usual partner can't make it, <strong>your season keeps rolling.</strong> No wasted Thursdays.</p>
     </div>
   </div>
 
-  <!-- CTA -->
   <div class="cta">
     <div class="cta-eyebrow">Thursday Nights · The Voodoo Cellar</div>
     <h2>Boise's Best Night<br>of Beer Pong.</h2>
     <p>Unique drinks, good people, and the best beer pong in Boise. Don't be spooked — come see what we're about.</p>
-
     <div class="cta-details">
       <div class="cta-detail">
         <div class="d-label">When</div>
@@ -617,13 +548,11 @@
         <div class="d-val">The Voodoo Cellar</div>
       </div>
     </div>
-
     <div class="footer-badge">Team Play · Good People · No Drama</div>
     <div class="page-foot">The Voodoo Players Club — Beer Pong League at The Voodoo Cellar</div>
   </div>
 
 </div>
-
 <script>
   const img = document.getElementById('logo-img');
   img.onerror = function() {
